@@ -6,6 +6,7 @@ const { resolve } = require('path');
 var students = [];
 
 
+
 function prep(){
     return new Promise(function(resolve, reject){
         fs.readFile('./student.json', (err,data) =>{
@@ -36,4 +37,21 @@ function highGPA(){
     })
 }
 
-module.exports = {prep, cpa, highGPA};
+function getAllStudents(){
+return new Promise(function(resolve, reject){
+    if(students.length == 0) reject ("No result returned")
+    resolve(students);
+})
+}
+
+
+function addStudent(){
+    return new Promise(function(resolve, reject){
+        if(students.length == 0) reject ("No result returned");
+        const formData = req.body;
+        const dataReceived = "Form data" + JSON.stringify(formData) +"<br>";
+        resolve(dataReceived);
+    })
+}
+
+module.exports = {prep, cpa, highGPA, getAllStudents, addStudent};

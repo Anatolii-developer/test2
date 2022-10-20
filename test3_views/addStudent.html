@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <title> Register User</title>
+        <style>
+            .center {
+                width : 50%;
+                margin: auto;
+                padding: 10px;
+                border: dotted black 2px;
+                background: lightgray;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "center">
+        <h3> Add Student </h3>
+        <form name="high" method = "post"
+        enctype = "application/x-www-form-urlencoded"
+            action = "addStudent">
+            <p> Student ID: <input type = "number" id = "studId"> </p>
+            <p> Student Name: <input type = "text" name = "name"> </p>
+            <p> Program: <input type = "text"  program = "program"> </p>
+            <p> GPA: <input type = "number" gpa = "gpa"> </p>
+            <label for="addStudent">Program:</label>
+            <select id="student" name="programs">
+            <option value="BSD">BSD</option>
+            <option value="CPA">CPA</option>
+            <option value="DSA">DSA</option>
+            </select>
+            <input type="submit" value="Add Student">
+             <input type="reset">
+             
+        </form>
+    </div>
+    </body>
+</html>
+</html>
